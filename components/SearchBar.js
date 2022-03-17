@@ -3,6 +3,7 @@ import React from "react";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import AntDesign from "react-native-vector-icons/AntDesign";
+
 export default function SearchBar() {
   return (
     <View style={{ marginTop: 15, flexDirection: "row" }}>
