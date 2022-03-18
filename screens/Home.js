@@ -1,17 +1,25 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import HeaderTabs from "../components/HeaderTabs";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
+import RestorantItem, { localRestorants } from "../components/RestorantItem";
+
+const YELP_API_KEY = "";
 
 export default function Home() {
+  const [restorantData, setRestorantData] = React.useState(localRestorants);
+
   return (
-    <SafeAreaView style={{backgroundColor: '#eee', flex: 1}}>
-      <View style={{backgroundColor: 'white', padding: 15}}>
+    <>
+      <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTabs />
         <SearchBar />
       </View>
-      <Categories />
-    </SafeAreaView>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Categories />
+        <RestorantItem restorantData={restorantData} />
+      </ScrollView>
+    </>
   );
 }
