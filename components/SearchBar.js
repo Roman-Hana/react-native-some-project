@@ -23,7 +23,7 @@ export default function SearchBar() {
     >
       <GooglePlacesAutocomplete
         placeholder="Search"
-        query={{ key: "AIzaSyC_DEyrGqMXgz8MT2hTIpWFNY6TrGmUMEk" }}
+        query={{ key: "API_KEy" }}
         fetchDetails={true}
         onPress={(data, details = null()) => {
           console.log(data, details);
